@@ -65,6 +65,12 @@ public class Main {
 
             } catch (SQLException ex) {
                 ex.printStackTrace();
+            }  finally {
+                try {
+                    connection.close();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
             }
         }
     }
